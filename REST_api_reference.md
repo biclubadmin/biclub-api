@@ -1,5 +1,6 @@
 # API Reference
 
+``` 访问根路径：https://api.biclub.com/api/v2
 ``` symbol 规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以此类推```
 
 
