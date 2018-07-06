@@ -10,7 +10,7 @@ API接口请求地址
 例：
 
 ```
-https://zuulapi.biclub.com/ttserviceread/api/v2/market/tickers?symbol=bz-usdt
+https://api.biclub.com/api/v2/market/tickers?symbol=bz-usdt
 ```
 
 #### GET /market/tickers 获取市场24小时成交量数据
