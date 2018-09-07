@@ -377,7 +377,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  | 参数名称    | 是否必须  | 类型  | 描述    | 默认值   | 取值范围  |
  | ------- | ----- | ------ | ----- | ----- | ----  |
  | number    | true  | string | 委托数量   |    | |
- | orderType    | true  | string | 委托类型   |    | |
+ | orderType    | true  | string | 委托类型   |    |buy-limit:现价买入,sell-limit:限价卖出，buy-market：市价买入，sell-market：市价卖出 |
  | price    | true  | string | 委托价格   |    | |
  | source    | true  | string | 来源   |    | web，ios，android，api |
  | symbol    | true  | string | 交易对   |    | btc-usdt, bz-usdt, eth-usdt ...|
