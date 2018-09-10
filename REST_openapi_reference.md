@@ -492,6 +492,70 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  }
  ```
  
+  ### 批量取消委托订单API
+ 
+ API接口请求地址
+ 
+ 例：
+ 
+ ```
+ https://api.biclub.com/api/v1/order/orders/batchcancel
+ ```
+ 
+ #### POST /v1/order/orders/batchcancel 批量取消订单操作
+ 
+  请求参数:
+ 
+ | 参数名称    | 是否必须  | 类型  | 描述    | 默认值   | 取值范围  |
+ | ------- | ----- | ------ | ----- | ----- | ----  |
+ | orderIdList    | true  | list | 委托订单号   |    | 委托下单返回的订单号最多50条 |
+ | symbol    | true  | string | 交易对   |    | btc-usdt, bz-usdt, eth-usdt ...|
+ | accessKey    | true  | string | accessKey   |    | |
+ | timestamp    | true  | string | 时间戳   |    | |
+ | sign    | true  | string | 数字签名   |    | |
+ 
+  响应数据:
+ 
+ | 参数名称   | 是否必须 | 数据类型   | 描述     | 取值范围     |
+ | ---------- | ---- | ------- | ------- | ------  |
+ | success    | true | boolean |     | true 或者 false |
+ | returnCode | true | string  | 响应返回码 如：200     |      |
+ | returnMsg  | true | string  | 响应返回信息     |    |
+ | data       | true | object  | 响应数据 |    |
+ 
+ data 说明:
+ 
+ ```
+   "data": 操作结果
+ ```
+ 
+ 
+ 请求示例
+ 
+ ```
+ /* POST /v1/order/orders/batchcancel */
+ {
+   "orderIdList":["87e8c3ed-dd11-4522-a968-aba88ae2733b","e0b4293e-1fc3-4328-b021-e542148824fa"],
+   "symbol": "btc-usdt",
+   "timestamp":1535955784075,
+   "accessKey":"4f47445f-efc3-4063-ae56-1165b357c747",
+   "sign":"b210c02f58c193176515020bc7ff332b00efd55285b12df3cdfe06e8253c0490"
+ }
+ ```
+ 
+ 响应示例
+ 
+ ```
+ /* POST /v1/order/orders/batchcancel */
+ {
+   "success": true,
+   "returnCode": "200",
+   "returnMsg": "success",
+   "data": "取消成功"
+ }
+ ```
+ 
+ 
  ### 查询指定委托单API
  
  API接口请求地址
