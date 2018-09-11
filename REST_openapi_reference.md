@@ -14,7 +14,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v2/market/common/symbols
+ https://api.biclub.com/api/market/common/symbols
  ```
  
  #### GET /market/common/symbols 获取最新交易对
