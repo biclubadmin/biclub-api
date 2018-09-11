@@ -746,10 +746,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/account/balance
+ https://api.biclub.com/api/v1/account/balance/list
  ```
  
- #### POST /v1/order/orders/consigns 获取账户资产列表
+ #### POST /v1/account/balance/list 获取账户资产列表
  
   请求参数:
  
@@ -787,7 +787,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/account/balance */
+ /* POST /v1/account/balance/list */
  {
     "accessKey":"ed221a61-67bb-4764-b602-749bf1354b59",
 	"coinType":"btc",
@@ -799,7 +799,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/account/balance */
+ /* POST /v1/account/balance/list */
  {
    "success": true,
     "returnCode": "200",
@@ -828,7 +828,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  https://api.biclub.com/api/v1/account/deposit/address
  ```
  
- #### POST /v1/order/orders/consigns 获取充值地址
+ #### POST /v1/account/deposit/address 获取充值地址
  
   请求参数:
  
