@@ -355,7 +355,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  
  #### 
 ``` 
-访问根路径：https://api.biclub.com/api/v1
+访问根路径：https://api.biclub.com/api/trade
 symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以此类推
 ```
 
@@ -367,10 +367,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/order/orders/place
+ https://api.biclub.com/api/trade/order/orders/place
  ```
  
- #### POST /v1/order/orders/place 下单操作
+ #### POST /trade/order/orders/place 下单操作
  
   请求参数:
  
@@ -404,7 +404,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/order/orders/place */
+ /* POST /trade/order/orders/place */
  {
    "number": "1",
    "orderType": "buy-limit",
@@ -420,7 +420,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/order/orders/place */
+ /* POST /trade/order/orders/place */
  {
    "success": true,
    "returnCode": "200",
@@ -436,10 +436,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/order/orders/cancel
+ https://api.biclub.com/api/trade/order/orders/cancel
  ```
  
- #### POST /v1/order/orders/cancel 取消订单操作
+ #### POST /trade/order/orders/cancel 取消订单操作
  
   请求参数:
  
@@ -470,7 +470,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/order/orders/cancel */
+ /* POST /trade/order/orders/cancel */
  {
    "orderId":"87e8c3ed-dd11-4522-a968-aba88ae2733b",
    "symbol": "btc-usdt",
@@ -483,7 +483,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/order/orders/cancel */
+ /* POST /trade/order/orders/cancel */
  {
    "success": true,
    "returnCode": "200",
@@ -499,10 +499,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/order/orders/batchcancel
+ https://api.biclub.com/api/trade/order/orders/batchcancel
  ```
  
- #### POST /v1/order/orders/batchcancel 批量取消订单操作
+ #### POST /trade/order/orders/batchcancel 批量取消订单操作
  
   请求参数:
  
@@ -533,7 +533,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/order/orders/batchcancel */
+ /* POST /trade/order/orders/batchcancel */
  {
    "orderIdList":["87e8c3ed-dd11-4522-a968-aba88ae2733b","e0b4293e-1fc3-4328-b021-e542148824fa"],
    "symbol": "btc-usdt",
@@ -546,7 +546,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/order/orders/batchcancel */
+ /* POST /trade/order/orders/batchcancel */
  {
    "success": true,
    "returnCode": "200",
@@ -563,10 +563,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/order/orders/consign
+ https://api.biclub.com/api/trade/order/orders/consign
  ```
  
- #### POST /v1/order/orders/consign 获取指定委托单
+ #### POST /trade/order/orders/consign 获取指定委托单
  
   请求参数:
  
@@ -611,7 +611,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/order/orders/consign */
+ /* POST /trade/order/orders/consign */
  {
     "symbol":"btc-usdt",
 	"orderId":"51de9b3d-11f0-4c46-9aa2-abd389797659",
@@ -624,7 +624,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/order/orders/consign */
+ /* POST /trade/order/orders/consign */
  {
     "success": true,
     "returnCode": "200",
@@ -653,10 +653,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/order/orders/consigns
+ https://api.biclub.com/api/trade/order/orders/consigns
  ```
  
- #### POST /v1/order/orders/consigns 获取委托单列表
+ #### POST /trade/order/orders/consigns 获取委托单列表
  
   请求参数:
  
@@ -702,7 +702,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/order/orders/consigns */
+ /* POST /trade/order/orders/consigns */
  {
     "symbol":"btc-usdt",
 	"direct":"1",
@@ -716,7 +716,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/order/orders/consigns */
+ /* POST /trade/order/orders/consigns */
  {
    "success": true,
     "returnCode": "200",
@@ -746,10 +746,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/account/balance/list
+ https://api.biclub.com/api/trade/account/balance/list
  ```
  
- #### POST /v1/account/balance/list 获取账户资产列表
+ #### POST /trade/account/balance/list 获取账户资产列表
  
   请求参数:
  
@@ -787,7 +787,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/account/balance/list */
+ /* POST /trade/account/balance/list */
  {
     "accessKey":"ed221a61-67bb-4764-b602-749bf1354b59",
 	"coinType":"btc",
@@ -799,7 +799,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/account/balance/list */
+ /* POST /trade/account/balance/list */
  {
    "success": true,
     "returnCode": "200",
@@ -825,10 +825,10 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  例：
  
  ```
- https://api.biclub.com/api/v1/account/deposit/address
+ https://api.biclub.com/api/trade/account/deposit/address
  ```
  
- #### POST /v1/account/deposit/address 获取充值地址
+ #### POST /trade/account/deposit/address 获取充值地址
  
   请求参数:
  
@@ -863,7 +863,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  请求示例
  
  ```
- /* POST /v1/account/deposit/address */
+ /* POST /trade/account/deposit/address */
  {
     "coinTypes":"bch,btc,usdt",
     "timestamp":1535955784075,
@@ -875,7 +875,7 @@ symbol规则： 基础币种+计价币种。如btc-usdt, bz-usdt, eth-usdt 以�
  响应示例
  
  ```
- /* POST /v1/account/deposit/address */
+ /* POST /trade/account/deposit/address */
  {
    "success": true,
     "returnCode": "200",
